@@ -1,0 +1,236 @@
+html {
+	background-image: linear-gradient(rgb(112, 11, 189), rgb(0, 0, 0));
+	height: 100%;
+}
+div.a {
+	width: 90%;
+	margin: 0px auto;
+}
+div a:a hover {
+	color: red;
+}
+.a div.container-nav{
+	display: inline-flex;
+	width: 100%;
+	background-color: rgba(250, 250, 250, 0.5);
+	opacity: 0.9;
+
+}
+.container-nav div.con-logo{
+	width: 50%;
+	text-align: left;
+	padding: 20px;
+}
+div.con-logo span {
+	font-size: 30px;
+	color: #f59b33;
+	font-family: Merriweather;
+	color: white;
+  	text-shadow: 1px 1px 2px black, 0 0 25px blue, 0 0 5px darkblue;
+} 
+.container-nav nav.navigation {
+	float: right;
+	width: 70%;
+	color: #000;
+}
+.navigation ul {
+	display: flex;
+	list-style: none;
+	justify-content: space-between;
+	color:#000;
+}
+.navigation ul li {
+	display: inline-block;
+	font-size: 30px;
+	color: #000;
+}
+
+
+div h1 {
+	color: white;
+	text-align: center;
+	font-size: 25px;
+	font-family: Open Sans;
+	padding-top: 20px;
+}
+div.a table.table {
+	width: 100%;
+	border: 2px solid;
+	border-collapse: collapse;
+	color: #fff;
+}
+div table.table tr.A {
+	font-size: 19px;
+}
+div.a table.table tr.table-tr {
+	display: tab ;
+	border: 2px solid;
+	border-color: #fff;
+	border-collapse: collapse;
+}
+
+table, th, td {
+	border: 1px solid;
+	color: #fff;
+}
+
+div.a div.main {
+	color: #fcf642c1; 
+	display: flex;
+}
+
+nav.navigation ul a {
+	text-decoration: none;
+	color: white;
+	font-family: Open Sans;
+}
+
+nav.navigation ul a a:hover {
+	color: red;
+}
+
+div h1.time {
+	float: left;
+	font-size: 12px;
+	font-style: normal;
+	position: relative;
+	transform: translateY(570px);
+
+}
+
+div h1.text {
+	font-size: 19px;
+}
+
+table.table tr.table-tr a {
+	color: white;
+}
+
+div.form {
+	height: 100%;
+	position: relative;
+	top: 20vh;
+	width: 90%;
+	margin: 0 auto;
+}
+
+ div.form form{
+ 	width: 100%;
+ 	margin: 25%;
+ 	position: relative;
+ 	bottom: 230px;
+
+ }
+
+div.form form input {
+	display: block;
+	width: 50%;
+	padding: 12px 20px;
+  	margin: 8px 0;
+  	box-sizing: border-box;
+}
+
+div.form form button.sign {
+	position: relative;
+	left: 300px;
+	width: 100px;
+	height: 40px;
+}
+
+div.form form h1.registr a{
+	text-decoration: none;
+	color: rgba(235, 235, 235, 0.5);
+	font-size: 20px;
+	position: relative;
+	right: 350px;
+	bottom: 20px;
+}
+div.form form h1.registr a:hover{
+	color: red;
+}
+div.form form button {
+	position: relative;
+	left: 190px;
+	width: 300px;
+	height: 50px;
+}
+div.form form h1.sign_in a{
+	text-decoration: none;
+	color: rgba(235, 235, 235, 0.5);
+	font-size: 20px;
+	position: relative;
+	right: 350px;
+	bottom: 20px;
+}
+
+div.form form h1.sign_in a:hover{
+	color: red;
+}
+
+div h1 a {
+	color: rgba(242, 242, 242, 0.5);
+	text-decoration: none ;
+}
+
+div h1 a a:hover{
+	color: red;
+}
+
+div h1.update a {
+	color: rgba(242, 242, 242, 0.5);
+	font-size: 20px;
+	text-decoration: none;
+	float: right;
+	position: relative;
+	transform: translateY(550px);
+	
+}
+
+div h1.update a a:hover{
+	color: red; 
+}
+
+div h1.response a {
+	color: rgba(242, 242, 242, 0.5);
+	font-size: 20px;
+	text-decoration: none;
+	float: right;
+	position: relative;
+	transform: translateY(470px);
+	
+}
+
+div h1.response a a:hover{
+	color: red;
+}
+
+div h1.create {
+	text-align: right;
+	font-size: 20px;
+	text-decoration: none;
+}
+
+div h1.create a:hover{
+	color: red;
+
+}
+
+div table tr.table-tr td a {
+	color: white;
+}
+
+div table.response_table {
+	width: 100%;
+
+}
+
+div.Pagination {
+	color: white;
+	text-align: center;
+	padding-top: 5%;
+}
+div form.filter {
+	color: white;
+	text-align: center;
+	padding-bottom: 5%;
+}

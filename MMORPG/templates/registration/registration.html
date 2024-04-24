@@ -1,0 +1,17 @@
+{% extends "default.html" %}
+{% block navig %}
+{% endblock navig %}
+{% block not_navig %}
+{% endblock not_navig %}
+{% block post %}
+    <div class="form">
+        <form method="POST">
+            {% csrf_token %}
+            <input type="text" placeholder="Ваше имя" name="username">
+            <input type="email" placeholder="Ваш эл.адрес" name="email">
+            <input type="password" placeholder="Пароль" name="password">
+            <button type="submit"> Зарегистрироваться </button>
+            <h1 class="sign_in"><a href="{% url 'sign-in' %}">Войти в существующий аккаунт</a></h1>
+        </form>
+    </div>
+{% endblock post%}

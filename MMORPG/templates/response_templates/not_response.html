@@ -1,0 +1,12 @@
+{% extends 'default.html' %}
+{% block navig %}
+{% endblock navig %}
+
+{% block post %}
+    <div>
+        <h1> Эта страница доступна только авторизованному пользователю </h1>
+        <h1><a href="{% url 'sign-in'%}">Перейти на страницу входа</a></h1>
+    </div>
+{% endblock post %}
+
+

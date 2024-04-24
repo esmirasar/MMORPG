@@ -1,0 +1,12 @@
+{% extends "default.html" %}
+{% block post %}
+    <div>
+        <h1>{{ post_detail.title }}</h1>
+        <h1 class="text">{{ post_detail.text|safe }}</h1>
+        <h1 class="time">{{ post_detail.time_create }}</h1>
+        {% if request.user.is_authenticated %}
+        <h1 class="update"><a href="{% url 'post_update' post_detail.pk %}"> Редактировать объявление </a></h1>
+        <h1 class="response"><a href="{% url 'response_create' post_detail.pk  %}">Откликнуться</a></h1>
+        {% endif %}
+    </div>
+{% endblock post %}

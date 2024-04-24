@@ -1,0 +1,44 @@
+{% extends "default.html "%}
+
+{% block post %}
+<div>
+    <h1> Отклики </h1>
+    <form class="filter" action="" method="get">
+        {{filterset.form.as_p}}
+        <input type="submit" value="Найти" />
+    </form>
+<table class="response_table">
+    <tr>
+        <th> Пост </th>
+        <th> Текст отклика </th>
+        <th> Дата создания </th>
+    </tr>
+    <tr></tr>
+     {% for response in response_list %}
+        <tr  class="table-tr", align="center">
+            <td><a href="{% url 'post_id' response.post.pk %}">{{ response.post.title }}</a></td>
+            <td><a href="{% url 'response_detail' response.pk%}">{{ response.text }}</td>
+            <td>{{ response.date_create }}</td>
+    {% endfor %}
+</table>
+</div>
+<div class="Pagination">
+   {% if page_obj.has_previous %}
+       <a href="?page=1">1</a>
+       {% if page_obj.previous_page_number != 1 %}
+           ...
+           <a href="?page={{ page_obj.previous_page_number }}">{{ page_obj.previous_page_number }}</a>
+       {% endif %}
+   {% endif %}
+
+   {{ page_obj.number }}
+
+   {% if page_obj.has_next %}
+       <a href="?page={{ page_obj.next_page_number }}">{{ page_obj.next_page_number }}</a>
+       {% if paginator.num_pages != page_obj.next_page_number %}
+           ...
+           <a href="?page={{ page_obj.paginator.num_pages }}">{{ page_obj.paginator.num_pages }}</a>
+       {% endif %}
+   {% endif %}
+</div>
+{% endblock post %}

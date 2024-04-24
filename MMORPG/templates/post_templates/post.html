@@ -1,0 +1,51 @@
+{% extends "default.html" %}
+{% block post %}
+<div>
+    <h1> Все объявления </h1>
+
+    {% if request.user.is_authenticated %}
+        <h1 class="create"><a href="{% url 'post_create' %}"> Создать объявление </a></h1>
+
+        {% if not_subscribe %}
+            <h1 class="create"><a href="{% url 'subscription' %}"> Подписаться на рассылку </a></h1>
+        {% endif %}
+    {% endif %}
+
+<table class="table">
+    <tr class="A">
+        <th>Заголовок объявления</th>
+        <th>Текст объявления</th>
+        <th>Категория</th>
+        <th>Дата публикации</th>
+    </tr>
+    <tr></tr>
+    {% for post in post_list1 %}
+        <tr  class="table-tr", align="center">
+            <td><a href="{% url 'post_id' post.pk %}">{{ post.title }}</a></td>
+            <td>{{ post.text }}</td>
+            <td>{{ post.category }}</td>
+            <td>{{ post.time_create }}</td>
+        </tr>
+    {% endfor %}
+</table>
+</div>
+<div class="Pagination">
+   {% if page_obj.has_previous %}
+       <a href="?page=1">1</a>
+       {% if page_obj.previous_page_number != 1 %}
+           ...
+           <a href="?page={{ page_obj.previous_page_number }}">{{ page_obj.previous_page_number }}</a>
+       {% endif %}
+   {% endif %}
+
+   {{ page_obj.number }}
+
+   {% if page_obj.has_next %}
+       <a href="?page={{ page_obj.next_page_number }}">{{ page_obj.next_page_number }}</a>
+       {% if paginator.num_pages != page_obj.next_page_number %}
+           ...
+           <a href="?page={{ page_obj.paginator.num_pages }}">{{ page_obj.paginator.num_pages }}</a>
+       {% endif %}
+   {% endif %}
+</div>
+{% endblock post %}

@@ -1,0 +1,8 @@
+.env
+**/__pycache__
+__pycache__/
+*/__pacache__/
+venv_MMORPG
+.idea
+templates/post.txt
+MMORPG/media/

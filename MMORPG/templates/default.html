@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <script async charset="utf-8" src="//cdn.embedly.com/widgets/platform.js"></script>
+    <link rel="stylesheet" href="{% static 'main/main.css'%}">
+    <meta charset="UTF-8">
+    <title>MMORPG</title>
+</head>
+<body>
+<div class='a'>
+    <div class="container-nav">
+        <div class='con-logo'>
+            <span> MMORPG </span>
+        </div>
+        {% if request.user.is_authenticated %}
+        {% block navig %}
+        <nav class='navigation'>
+            <ul>
+                <li><a href="{% url 'post_list'%}">Объявления</a></li>
+                <li><a href="{% url 'response_list' %}">Отклики</a></li>
+                <li><a href="{% url 'logout' %}">Выйти</a></li>
+            </ul>
+        </nav>
+        {% endblock navig %}
+        {% else %}
+        {% block not_navig %}
+        <nav class='navigation'>
+            <ul>
+                <li><a href="{% url 'post_list'%}">Объявления</a></li>
+                <li><a href="{% url 'sign-in' %}">Войти</a></li>
+            </ul>
+        </nav>
+        {% endblock not_navig %}
+        {% endif %}
+    </div>
+    {% block post %}
+    {% endblock post %}
+
+</div>
+<script>
+    document.querySelectorAll( 'oembed[url]' ).forEach( element => {
+        // Create the <a href="..." class="embedly-card"></a> element that Embedly uses
+        // to discover the media.
+        const anchor = document.createElement( 'a' );
+
+        anchor.setAttribute( 'href', element.getAttribute( 'url' ) );
+        anchor.className = 'embedly-card';
+
+        element.appendChild( anchor );
+    } );
+</script>
+</body>
+</html>

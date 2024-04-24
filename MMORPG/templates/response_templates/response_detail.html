@@ -1,0 +1,12 @@
+{% extends "default.html" %}
+
+{% block post %}
+<div>
+        <h1 class="text">{{ response_detail.text|safe }}</h1>
+        <h1 class="time">{{ response_detail.date_create }}</h1>
+        {% if request.user.is_authenticated %}
+        <h1 class="update"><a href="{% url 'delete_response' response_detail.pk %}"> Удалить отклик </a></h1>
+        <h1 class="response"><a href="{% url 'accept_response' response_detail.pk %}">Принять отклик</a></h1>
+        {% endif %}
+    </div>
+{% endblock post %}
