@@ -18,15 +18,15 @@
 5. обавить файл .env с содержимым:
    ```
    PORT = '3306'
-HOST = 'localhost'
-USER = пользователь для базы данных MySQL
-PASSWORD = 'пароль от базы данных'
-NAME = 'название ьазы данных'
-SECRET_KEY = 'секретный ключ джанго'
-EMAIL_HOST = 'smtp.yandex.ru'
-EMAIL_PORT = 465
-EMAIL_HOST_USER = "почта"
-EMAIL_HOST_PASSWORD = "9d1b3c43b08aff45c9c35ceb174003dd"
+   HOST = 'localhost'
+   USER = пользователь для базы данных MySQL
+   PASSWORD = 'пароль от базы данных'
+   NAME = 'название ьазы данных'
+   SECRET_KEY = 'секретный ключ джанго'
+   EMAIL_HOST = 'smtp.yandex.ru'
+   EMAIL_PORT = 465
+   EMAIL_HOST_USER = "почта"
+   EMAIL_HOST_PASSWORD = "9d1b3c43b08aff45c9c35ceb174003dd"
    ```
 6. Запустить проект командой
    ```
