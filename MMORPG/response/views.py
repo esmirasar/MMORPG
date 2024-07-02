@@ -15,6 +15,7 @@ from dotenv import load_dotenv
 
 load_dotenv()
 
+
 # Представление списка откликов
 class ResponseListView(LoginRequiredMixin, ListView):
     model = Response
@@ -32,11 +33,13 @@ class ResponseListView(LoginRequiredMixin, ListView):
         context['filterset'] = self.filterset
         return context
 
+
 # Представление детальной информации отклика
 class ResponseDetailView(DetailView):
     model = Response
     template_name = 'response_templates/response_detail.html'
     context_object_name = 'response_detail'
+
 
 # Представление для создания отклика
 class ResponseCreateView(LoginRequiredMixin, CreateView):
@@ -55,12 +58,14 @@ class ResponseCreateView(LoginRequiredMixin, CreateView):
 
         return super().form_valid(form)
 
+
 # Удаление отклика
 @login_required
 def delete_response(request, **kwargs):
     response = Response.objects.get(pk=kwargs['pk'])
     response.delete()
     return redirect('response_list')
+
 
 # Принятие отклика
 @login_required
